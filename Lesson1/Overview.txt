@@ -26,3 +26,15 @@ Các thuộc tính và giá trị của thuộc tính CSS
 - Check font chữ, font size
 7. Thực hành Project (2-3 buổi)
 - Lấy thiết kế và viết HTML, CSS, Javascript để tạo thành 1 sản phẩm hoàn chỉnh
+
+Bài lab nộp thông qua classroom, nộp bằng link git.
+
+Một số câu lệnh git:
+    - Kiểm tra version: git --version
+    - Khởi tạo repo mới: git init
+    - Clone repo từ GitHub: git clone <URL>
+    - Kiểm tra trạng thái file: git status
+    - Add file vào staging: 
+        git add <tên-file>
+        git add .
+    - Commit: git commit -m "message"
