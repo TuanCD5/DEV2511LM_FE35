@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 4 - Lab 02</title>
+    <style>
+        /* Định dạng cho thẻ ul bao quanh menu */
+        ul.menu {
+            list-style-type: none; /* Bỏ dấu chấm đầu dòng mặc định */
+            margin: 0;
+            padding: 0;
+            background-color: #ff6633; /* Màu nền cam giống trong ảnh */
+            border-radius: 25px; /* Bo tròn các góc của thanh menu */
+            overflow: hidden; /* Đảm bảo nội dung con không tràn ra ngoài góc bo */
+            display: inline-block; /* Để thanh menu co giãn theo nội dung */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Định dạng cho từng mục li */
+        ul.menu li {
+            float: left; /* Xếp các mục nằm ngang */
+            border-right: 1px solid white; /* Tạo đường kẻ trắng ngăn cách bên phải */
+        }
+
+        /* Loại bỏ đường kẻ bên phải của mục cuối cùng */
+        ul.menu li:last-child {
+            border-right: none;
+        }
+
+        /* Định dạng cho liên kết bên trong li */
+        ul.menu li a {
+            display: block;
+            color: yellow; /* Màu chữ vàng */
+            text-align: center;
+            padding: 15px 25px; /* Khoảng cách đệm để tạo độ thoáng */
+            text-decoration: none; /* Bỏ gạch chân liên kết */
+            font-weight: bold; /* Chữ in đậm */
+            font-size: 16px;
+        }
+
+        /* Hiệu ứng khi di chuột vào (tùy chọn thêm cho đẹp) */
+        ul.menu li a:hover {
+            background-color: #e65c00;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Khóa học</a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="#">Đăng ký</a></li>
+        <li><a href="#">Đăng nhập</a></li>
+    </ul>
+
+</body>
+</html>

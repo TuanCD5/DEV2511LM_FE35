@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2 - Lab 04.00</title>
+    <style type="text/css">
+        /* CÁCH 1: CSS Nội bộ (Internal Style Sheet) - Đặt trong thẻ <style> */
+        
+        /* Định dạng khung bao ngoài */
+        .container {
+            background-color: #E6E6FA; /* Màu nền tím nhạt giống hình */
+            width: 500px;
+            padding: 20px;
+            font-family: "Times New Roman", Times, serif;
+            border: 1px solid #ccc;
+        }
+
+        /* Định dạng thẻ h5 nói chung (Selector theo TagName) */
+        h5 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* CÁCH 2: CSS theo Lớp (Class Selector) */
+        
+        /* Class cho màu đỏ */
+        .red-class {
+            color: red;
+        }
+
+        /* Class cho màu xanh và in đậm */
+        .blue-class {
+            color: blue;
+            font-weight: bold;
+            font-size: 18px; /* Chỉnh cỡ chữ to hơn giống hình mẫu */
+            margin: 15px 0;
+        }
+
+        /* Định dạng chung cho thẻ p */
+        p {
+            font-size: 16px;
+            color: #333; /* Màu đen xám mặc định */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h5 class="red-class">This is an H5 element that uses the RED class</h5>
+
+        <h5>This is an H5 element that has been allowed to use hotpink style.</h5>
+
+        <p class="blue-class">This paragraph uses the class BLUE</p>
+
+        <p>This paragraph does not use the class BLUE</p>
+
+        <p style="color: hotpink;">This paragraph is hotpink</p>
+    </div>
+
+</body>
+</html>

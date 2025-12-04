@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập Google</title>
+    <style>
+        /* 1. Thiết lập chung */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            margin: 0;
+        }
+
+        /* 2. Logo Google (Tạo màu chữ thay vì dùng ảnh) */
+        .google-logo {
+            font-family: "Times New Roman", serif; /* Font có chân giống logo cũ */
+            font-size: 38px;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        .g-blue { color: #4285F4; }
+        .g-red { color: #EA4335; }
+        .g-yellow { color: #FBBC05; }
+        .g-green { color: #34A853; }
+
+        /* Dòng chữ tiêu đề */
+        h2.sub-title {
+            font-size: 18px;
+            font-weight: normal;
+            color: #555;
+            margin: 0 0 30px 0;
+        }
+
+        /* 3. Thẻ Card chứa form (Khung xám) */
+        .login-card {
+            background-color: #f7f7f7; /* Màu nền xám nhạt đặc trưng */
+            width: 330px; /* Độ rộng chuẩn của form Google cũ */
+            padding: 40px;
+            border: 1px solid #d8d8d8; /* Viền mờ */
+            box-shadow: 0 2px 2px rgba(0,0,0,0.05); /* Đổ bóng nhẹ */
+            border-radius: 2px;
+            text-align: center; /* Căn giữa nội dung bên trong */
+        }
+
+        /* 4. Avatar mặc định (Vẽ bằng CSS) */
+        .avatar-placeholder {
+            width: 90px;
+            height: 90px;
+            background-color: #e0e0e0; /* Màu xám của hình tròn */
+            border-radius: 50%; /* Bo tròn thành hình tròn */
+            margin: 0 auto 30px auto; /* Căn giữa và đẩy xuống dưới */
+            position: relative;
+            overflow: hidden;
+        }
+        /* Vẽ phần đầu và thân người bằng CSS giả lập icon */
+        .avatar-placeholder::before { /* Đầu */
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 28px;
+            width: 34px;
+            height: 34px;
+            background-color: #bebebe;
+            border-radius: 50%;
+        }
+        .avatar-placeholder::after { /* Thân */
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 15px;
+            width: 60px;
+            height: 40px;
+            background-color: #bebebe;
+            border-radius: 50%;
+        }
+
+        /* 5. Các ô nhập liệu */
+        input[type="text"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 10px;
+            margin-bottom: 0; /* Đặt sát nhau */
+            border: 1px solid #d8d8d8;
+            box-sizing: border-box; /* Để padding không làm vỡ khung */
+            font-size: 16px;
+        }
+        
+        /* Chỉnh viền để 2 ô dính liền nhau đẹp hơn */
+        input[type="text"] {
+            border-bottom: none; /* Bỏ viền dưới của ô trên */
+            border-radius: 2px 2px 0 0;
+        }
+        input[type="password"] {
+            border-radius: 0 0 2px 2px;
+            margin-bottom: 20px;
+        }
+        
+        /* Hiệu ứng khi bấm vào ô nhập */
+        input:focus {
+            border-color: #4285F4;
+            outline: none;
+            position: relative; /* Để viền xanh đè lên viền xám */
+            z-index: 2;
+        }
+
+        /* 6. Nút Đăng nhập */
+        .btn-login {
+            width: 100%;
+            background-color: #4d90fe; /* Màu xanh dương Google cũ */
+            color: white;
+            font-weight: bold;
+            padding: 10px 0;
+            border: 1px solid #3079ed;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .btn-login:hover {
+            background-color: #357ae8;
+        }
+
+        /* 7. Các liên kết phụ */
+        .link-help {
+            color: #4285F4;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            text-align: left; /* Căn trái theo ảnh mẫu */
+        }
+        
+        .link-create {
+            margin-top: 20px;
+            color: #4285F4;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .link-help:hover, .link-create:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="google-logo">
+        <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+    </div>
+
+    <h2 class="sub-title">Đăng nhập để thêm tài khoản khác</h2>
+
+    <div class="login-card">
+        <div class="avatar-placeholder"></div>
+
+        <form action="#" method="post">
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Mật khẩu">
+            
+            <button type="submit" class="btn-login">Đăng nhập</button>
+            
+            <a href="#" class="link-help">Bạn cần trợ giúp?</a>
+        </form>
+    </div>
+
+    <a href="#" class="link-create">Tạo một tài khoản</a>
+
+</body>
+</html>

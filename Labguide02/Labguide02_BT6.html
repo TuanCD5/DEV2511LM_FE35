@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 6 - Lab 02</title>
+    <style>
+        /* Định dạng khung bao ngoài cho giống hình */
+        .form-container {
+            border: 2px solid #5c9ccc; /* Viền màu xanh nhạt */
+            padding: 20px;
+            width: 600px;
+            font-family: "Times New Roman", serif;
+        }
+        
+        h2 {
+            margin-top: 0;
+            color: #000;
+        }
+
+        /* Định dạng bảng để căn chỉnh thẳng hàng */
+        table {
+            width: 100%;
+        }
+        
+        td {
+            padding: 5px 0; /* Khoảng cách giữa các dòng */
+            vertical-align: top; /* Căn chữ lên trên cùng đối với ô textarea */
+        }
+
+        /* Định dạng độ rộng cho các ô input */
+        .input-short { width: 200px; }
+        .input-long { width: 350px; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="" method="post">
+            <h2>Đăng ký thông tin người sử dụng</h2>
+            
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="150"><b>Tên đăng nhập</b></td>
+                    <td><input type="text" name="username" class="input-short"></td>
+                </tr>
+                <tr>
+                    <td><b>Mật khẩu</b></td>
+                    <td><input type="password" name="password" class="input-short"></td>
+                </tr>
+                <tr>
+                    <td><b>Nhập lại mật khẩu</b></td>
+                    <td><input type="password" name="re-password" class="input-short"></td>
+                </tr>
+                <tr>
+                    <td><b>Email</b></td>
+                    <td><input type="email" name="email" class="input-long"></td>
+                </tr>
+                <tr>
+                    <td><b>Giới tính:</b></td>
+                    <td>
+                        <input type="radio" name="gender" id="nam" value="nam" checked> <label for="nam">Nam</label>
+                        <input type="radio" name="gender" id="nu" value="nu"> <label for="nu">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Độ tuổi</b></td>
+                    <td>
+                        <input type="radio" name="age" value="u13" checked> Dưới 13 tuổi
+                        <input type="radio" name="age" value="13-17"> Từ 13 đến 17 tuổi
+                        <input type="radio" name="age" value="18-25"> Từ 18 đến 25 tuổi
+                        <input type="radio" name="age" value="o25"> Trên 25 tuổi
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Sở thích của bạn:</b></td>
+                    <td>
+                        <input type="checkbox" name="hobby" value="music"> Âm nhạc
+                        <input type="checkbox" name="hobby" value="game"> Game
+                        <input type="checkbox" name="hobby" value="sport"> Thể thao
+                        <input type="checkbox" name="hobby" value="travel"> Du lịch
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Nghề nghiệp</b></td>
+                    <td>
+                        <select name="job">
+                            <option value="">Chọn ngành nghề</option>
+                            <option value="dev">Lập trình viên</option>
+                            <option value="student">Sinh viên</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Mô tả bản thân</b></td>
+                    <td>
+                        <textarea name="description" rows="4" cols="40">Mô tả về bạn thân bạn...</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <br>
+                        <input type="submit" value="Đăng ký">
+                        <input type="reset" value="Làm lại">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>

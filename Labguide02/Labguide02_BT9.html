@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 9 - Đăng nhập Facebook</title>
+    <style>
+        /* 1. Thiết lập chung */
+        body {
+            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+            background-color: #e9ebee; /* Màu nền xám nhạt của trang web */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. Khung chứa chính (Header xanh) */
+        .fb-header {
+            background-color: #3b5998; /* Màu xanh thương hiệu Facebook */
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        /* 3. Logo Facebook */
+        .fb-logo {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+        .fb-logo h1 {
+            color: white;
+            font-size: 40px;
+            margin: 0;
+            font-weight: bold;
+            /* Tạo font chữ giống logo FB cũ */
+            font-family: "Klavika", Helvetica, Arial, sans-serif; 
+            letter-spacing: -1px;
+        }
+
+        /* 4. Đường kẻ đỏ ngăn cách */
+        .red-line {
+            height: 3px;
+            background-color: #7e1f18; /* Màu đỏ đậm */
+            width: 100%;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ad3b3b; /* Hiệu ứng sáng nhẹ ở viền */
+        }
+
+        /* 5. Bố cục Form (Dùng bảng để căn thẳng hàng Label và Input) */
+        .login-form-container {
+            width: 500px;
+            margin: 0 auto; /* Căn giữa màn hình */
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 5px; /* Khoảng cách giữa các ô */
+        }
+
+        td {
+            vertical-align: top; /* Căn chỉnh nội dung lên trên cùng */
+        }
+
+        /* Label (Email, Mật khẩu) */
+        .input-label {
+            font-size: 12px;
+            font-weight: normal;
+            display: block;
+            margin-bottom: 3px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Ô nhập liệu (Input) */
+        input[type="text"], input[type="password"] {
+            border: 1px solid #1d4088;
+            padding: 3px;
+            width: 160px; /* Chiều rộng ô nhập */
+        }
+
+        /* Checkbox và Link bên dưới */
+        .sub-text {
+            font-size: 11px;
+            color: #98a9ca; /* Màu xám xanh nhạt */
+            text-decoration: none;
+            margin-top: 3px;
+            display: block;
+        }
+        .sub-text:hover {
+            text-decoration: underline;
+        }
+        
+        label.remember-me {
+            font-size: 11px;
+            color: #98a9ca;
+            vertical-align: text-top;
+        }
+
+        /* Nút Đăng nhập */
+        .btn-login {
+            background-color: #4267b2;
+            border: 1px solid #29487d;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 4px 8px;
+            cursor: pointer;
+            margin-top: 18px; /* Căn xuống cho ngang bằng với dòng input */
+        }
+        .btn-login:hover {
+            background-color: #365899;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="fb-header">
+        <div class="fb-logo">
+            <h1>facebook</h1>
+        </div>
+        
+        <div class="red-line"></div>
+
+        <div class="login-form-container">
+            <form action="#" method="post">
+                <table border="0">
+                    <tr>
+                        <td>
+                            <label class="input-label" for="email">Email hoặc điện thoại</label>
+                            <input type="text" id="email" name="email">
+                            <br>
+                            <input type="checkbox" id="remember"> 
+                            <label for="remember" class="remember-me">Duy trì đăng nhập</label>
+                        </td>
+
+                        <td>
+                            <label class="input-label" for="pass">Mật khẩu</label>
+                            <input type="password" id="pass" name="password">
+                            <br>
+                            <a href="#" class="sub-text">Quên mật khẩu?</a>
+                        </td>
+
+                        <td>
+                            <button type="submit" class="btn-login">Đăng nhập</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

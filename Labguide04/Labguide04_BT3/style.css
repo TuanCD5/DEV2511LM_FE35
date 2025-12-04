@@ -1,0 +1,117 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; /* Màu nền xám nhẹ */
+    display: flex;
+    justify-content: center; /* Căn giữa chiều ngang */
+    align-items: center;     /* Căn giữa chiều dọc */
+    height: 100vh;           /* Chiều cao bằng màn hình */
+}
+
+/* Khung bao ngoài (Card) */
+.auth-container {
+    background-color: #fff;
+    width: 450px;
+    padding: 48px 40px 36px;
+    border-radius: 8px;      /* Bo góc CSS3 */
+    border: 1px solid #dadce0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Đổ bóng nhẹ CSS3 */
+    text-align: center;
+}
+
+/* Logo giả lập Google */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.logo span:nth-child(1) { color: #4285f4; }
+.logo span:nth-child(2) { color: #ea4335; }
+.logo span:nth-child(3) { color: #fbbc05; }
+.logo span:nth-child(4) { color: #4285f4; }
+.logo span:nth-child(5) { color: #34a853; }
+.logo span:nth-child(6) { color: #ea4335; }
+
+h2 {
+    color: #202124;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    color: #202124;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* Định dạng Form input */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 13px 15px;
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    transition: 0.2s; /* Hiệu ứng chuyển động CSS3 */
+}
+
+/* Hiệu ứng khi bấm vào ô input */
+input:focus {
+    border: 2px solid #1a73e8;
+    outline: none;
+}
+
+/* Khu vực nút bấm */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+a:hover {
+    background-color: #f6fafe;
+    border-radius: 4px;
+}
+
+/* Nút bấm chính */
+.btn-primary {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background-color: #2b7de9;
+    box-shadow: 0 1px 2px rgba(60,64,67,0.3);
+}
+
+/* Dành riêng cho trang đăng ký: chia 2 cột */
+.row {
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 5 - Menu Dọc</title>
+    <style>
+        /* 1. Định dạng khung chứa menu */
+        ul.menu-doc {
+            list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+            padding: 0;
+            margin: 0;
+            width: 300px; /* Độ rộng của menu, bạn có thể chỉnh sửa tùy ý */
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Tạo khoảng cách giữa các ô (đường kẻ trắng) */
+        ul.menu-doc li {
+            margin-bottom: 5px; /* Tạo khoảng trắng 5px giữa các mục */
+        }
+
+        /* 3. Định dạng chung cho các liên kết (Ô màu xám) */
+        ul.menu-doc li a {
+            display: block; /* Biến thẻ a thành khối để phủ kín ô li */
+            background-color: #bfbfbf; /* Màu xám nền mặc định */
+            color: yellow; /* Màu chữ vàng */
+            text-align: center; /* Căn giữa chữ */
+            padding: 15px 0; /* Độ cao của ô */
+            text-decoration: none; /* Bỏ gạch chân */
+            font-size: 20px; /* Cỡ chữ */
+            font-weight: bold; /* Chữ in đậm */
+        }
+
+        /* 4. Định dạng RIÊNG cho mục đầu tiên (Trang chủ - Màu tím) */
+        /* Sử dụng :first-child để chọn thẻ li đầu tiên */
+        ul.menu-doc li:first-child a {
+            background-color: #e6ccff; /* Màu tím nhạt giống hình mẫu */
+        }
+
+        /* Hiệu ứng khi di chuột (Tùy chọn thêm cho sinh động) */
+        ul.menu-doc li a:hover {
+            opacity: 0.8; /* Làm mờ nhẹ khi di chuột vào */
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="menu-doc">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Khóa học</a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="#">Đăng ký</a></li>
+        <li><a href="#">Đăng nhập</a></li>
+    </ul>
+
+</body>
+</html>

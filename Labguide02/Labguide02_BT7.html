@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 7 - Wufoo To Do List</title>
+    <style>
+        /* 1. Định dạng khung chung */
+        body {
+            font-family: "Lucida Grande", Tahoma, Arial, sans-serif;
+            background-color: #f0f0f0; /* Màu nền xám nhạt bên ngoài */
+        }
+        .container {
+            width: 650px;
+            background-color: #fff;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 2. Phần Header (Màu cam đỏ) */
+        .header {
+            background-color: #d33c1c; /* Màu cam đỏ Wufoo */
+            padding: 10px 20px;
+        }
+        .header h2 {
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        /* 3. Phần nội dung form */
+        .content {
+            padding: 20px;
+        }
+        h1.form-title {
+            font-size: 24px;
+            margin-top: 0;
+            border-bottom: 1px dotted #ccc; /* Đường kẻ chấm bi mờ bên dưới tiêu đề */
+            padding-bottom: 10px;
+        }
+
+        /* Định dạng nhãn (Label) */
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        /* Khoảng cách giữa các dòng */
+        .form-row {
+            margin-bottom: 15px;
+        }
+
+        /* Định dạng input và textarea */
+        input[type="text"], textarea, select {
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 14px;
+        }
+        
+        .input-full { width: 98%; }
+        textarea { resize: vertical; } /* Cho phép kéo giãn chiều dọc */
+
+        /* 4. Bố cục 2 cột cho Priority và Category */
+        .col-container {
+            display: flex;
+            gap: 20px; /* Khoảng cách giữa 2 cột */
+        }
+        .col-half {
+            width: 50%;
+        }
+        .select-box {
+            width: 100%;
+        }
+
+        /* 5. Định dạng phần Ngày tháng (Due Date) */
+        .date-group {
+            display: inline-block;
+            text-align: center;
+            margin-right: 5px;
+        }
+        .date-group input {
+            width: 30px; /* Ô ngày tháng nhỏ */
+            text-align: center;
+        }
+        .date-group input.year {
+            width: 50px; /* Ô năm rộng hơn chút */
+        }
+        .date-label {
+            display: block;
+            font-size: 10px;
+            font-weight: normal;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        /* Nút Submit */
+        .btn-submit {
+            background-color: #e6e6e6;
+            border: 1px solid #999;
+            padding: 5px 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .btn-submit:hover {
+            background-color: #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Wufoo</h2>
+    </div>
+
+    <div class="content">
+        <h1 class="form-title">To Do List</h1>
+        
+        <form action="#" method="post">
+            <div class="form-row">
+                <label for="item">Item</label>
+                <input type="text" id="item" name="item" class="input-full">
+            </div>
+
+            <div class="form-row">
+                <label for="desc">Description</label>
+                <textarea id="desc" name="description" rows="5" class="input-full"></textarea>
+            </div>
+
+            <div class="form-row col-container">
+                <div class="col-half">
+                    <label for="priority">Priority</label>
+                    <select id="priority" name="priority" class="select-box">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="col-half">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" class="select-box">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="shopping">Shopping</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>Due Date</label>
+                
+                <div class="date-group">
+                    <input type="text" maxlength="2">
+                    <span class="date-label">MM</span>
+                </div>
+                /
+                <div class="date-group">
+                    <input type="text" maxlength="2">
+                    <span class="date-label">DD</span>
+                </div>
+                /
+                <div class="date-group">
+                    <input type="text" maxlength="4" class="year">
+                    <span class="date-label">YYYY</span>
+                </div>
+                <span style="font-size: 18px;">📅</span>
+            </div>
+
+            <div class="form-row">
+                <label>Status</label>
+                <div style="background: #fff4c3; display: inline-block; padding: 3px;"> <input type="checkbox" id="status" name="status">
+                    <label for="status" style="display: inline; font-weight: normal;">Done.</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 4 - Layout CSS3</title>
+    <style>
+        /* --- THIẾT LẬP CHUNG --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Tính kích thước bao gồm cả border và padding */
+            font-family: "Times New Roman", serif;
+            font-size: 16px;
+        }
+
+        body {
+            padding: 10px; /* Tạo khoảng cách đệm xung quanh trang */
+        }
+
+        /* --- ĐỊNH DẠNG KHUNG (BOX) --- */
+        /* Class chung cho tất cả các khối để tạo viền xanh và căn giữa chữ */
+        .box {
+            border: 1px solid green;
+            text-align: center;
+            display: flex;           /* Dùng flex để căn giữa chữ theo chiều dọc và ngang */
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;      /* Khoảng cách dưới giữa các hàng */
+        }
+
+        /* --- KÍCH THƯỚC CÁC PHẦN --- */
+        
+        /* 1. Header */
+        header {
+            width: 100%;
+            height: 100px;
+        }
+
+        /* 2. Nav (Menu) */
+        nav {
+            width: 100%;
+            height: 40px;
+        }
+
+        /* 3. Khu vực nội dung chính (Chứa Left - Body - Right) */
+        .main-content {
+            display: flex;          /* Kích hoạt Flexbox để xếp các cột nằm ngang */
+            justify-content: space-between; /* Tạo khoảng cách đều */
+            height: 400px;          /* Chiều cao cố định cho khu vực giữa */
+            margin-bottom: 5px;     /* Khoảng cách với Footer */
+            border: none;           /* Khung bao ngoài không cần viền */
+        }
+
+        /* Cột Trái (Left) */
+        .left {
+            width: 20%;             /* Chiếm 20% chiều rộng */
+        }
+
+        /* Cột Giữa (Body) */
+        .body-content {
+            width: 58%;             /* Chiếm 58% chiều rộng (để lại 2% làm khe hở) */
+        }
+
+        /* Cột Phải (Right) */
+        .right {
+            width: 20%;             /* Chiếm 20% chiều rộng */
+        }
+
+        /* 4. Footer (Chân trang) */
+        footer {
+            width: 100%;
+            height: 80px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="box">
+        header
+    </header>
+
+    <nav class="box">
+        Nav
+    </nav>
+
+    <section class="main-content">
+        <aside class="left box">
+            Left
+        </aside>
+        
+        <main class="body-content box">
+            Body
+        </main>
+        
+        <aside class="right box">
+            Right
+        </aside>
+    </section>
+
+    <footer class="box">
+        footer
+    </footer>
+
+</body>
+</html>
