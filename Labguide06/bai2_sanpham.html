@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2 - Thêm sản phẩm</title>
+    <style>
+        .error { color: red; font-size: 0.85em; margin-left: 10px; }
+        table { border-collapse: collapse; margin-top: 20px; }
+        td { padding: 8px; vertical-align: top; }
+        input[type="text"] { width: 250px; }
+    </style>
+</head>
+<body>
+    <h2>Thêm Mới Sản Phẩm</h2>
+    <form>
+        <table border="0">
+            <tr>
+                <td>Mã sản phẩm:</td>
+                <td>
+                    <input type="text" id="proId">
+                    <br><span id="errId" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Tên sản phẩm:</td>
+                <td>
+                    <input type="text" id="proName">
+                    <br><span id="errName" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Đơn giá:</td>
+                <td>
+                    <input type="text" id="proPrice">
+                    <br><span id="errPrice" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Số lượng:</td>
+                <td>
+                    <input type="text" id="proQty">
+                    <br><span id="errQty" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Thêm mới" onclick="checkProduct()">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function checkProduct() {
+            // Lấy DOM
+            var id = document.getElementById("proId");
+            var name = document.getElementById("proName");
+            var price = document.getElementById("proPrice");
+            var qty = document.getElementById("proQty");
+
+            // Reset lỗi
+            document.getElementById("errId").innerHTML = "";
+            document.getElementById("errName").innerHTML = "";
+            document.getElementById("errPrice").innerHTML = "";
+            document.getElementById("errQty").innerHTML = "";
+
+            var isValid = true;
+
+            // 1. Validate Mã SP
+            if (id.value.trim() == "") {
+                document.getElementById("errId").innerHTML = "Vui lòng nhập mã sản phẩm";
+                isValid = false;
+            }
+
+            // 2. Validate Tên SP
+            if (name.value.trim() == "") {
+                document.getElementById("errName").innerHTML = "Vui lòng nhập tên sản phẩm";
+                isValid = false;
+            }
+
+            // 3. Validate Giá (Kiểm tra phải là số và > 0)
+            if (price.value.trim() == "") {
+                document.getElementById("errPrice").innerHTML = "Vui lòng nhập giá";
+                isValid = false;
+            } else if (isNaN(price.value)) { // Hàm isNaN kiểm tra Not a Number
+                document.getElementById("errPrice").innerHTML = "Giá phải là số";
+                isValid = false;
+            } else if (parseFloat(price.value) <= 0) {
+                document.getElementById("errPrice").innerHTML = "Giá phải lớn hơn 0";
+                isValid = false;
+            }
+
+            // 4. Validate Số lượng (Kiểm tra phải là số nguyên dương)
+            if (qty.value.trim() == "") {
+                document.getElementById("errQty").innerHTML = "Vui lòng nhập số lượng";
+                isValid = false;
+            } else if (isNaN(qty.value)) {
+                document.getElementById("errQty").innerHTML = "Số lượng phải là số";
+                isValid = false;
+            } else if (parseInt(qty.value) < 0) {
+                document.getElementById("errQty").innerHTML = "Số lượng không được âm";
+                isValid = false;
+            }
+
+            // Nếu tất cả hợp lệ
+            if (isValid) {
+                alert("Thêm sản phẩm thành công:\n" + name.value + " - Giá: " + price.value);
+            }
+        }
+    </script>
+</body>
+</html>
